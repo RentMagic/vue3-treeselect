@@ -24,10 +24,12 @@
 
     render() {
       const { instance, node } = this
+      const colorClass = node.Color ? `bg-[#${node.Color}]` : ''
       const itemClass = {
         'vue-treeselect__multi-value-item': true,
         'vue-treeselect__multi-value-item-disabled': node.isDisabled,
         'vue-treeselect__multi-value-item-new': node.isNew,
+        [colorClass]: !!colorClass,
       }
       const customValueLabelRenderer = instance.$slots['value-label']
       const labelRenderer = customValueLabelRenderer ? customValueLabelRenderer({ node }) : node.label
