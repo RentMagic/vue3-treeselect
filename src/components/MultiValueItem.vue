@@ -31,6 +31,9 @@
         'vue-treeselect__multi-value-item-new': node.isNew,
         [colorClass]: !!colorClass,
       }
+
+      console.log(itemClass);
+      
       const customValueLabelRenderer = instance.$slots['value-label']
       const labelRenderer = customValueLabelRenderer ? customValueLabelRenderer({ node }) : node.label
 
